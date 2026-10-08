@@ -45,7 +45,6 @@ export default function Codes() {
           <div
             key={code}
             style={{
-              padding: "12px",
               border: "1px dashed #999",
             }}
           >
@@ -55,7 +54,6 @@ export default function Codes() {
                 height: "250px",
                 boxSizing: "border-box",
                 background: "#10b981",
-                borderRadius: "18px",
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
