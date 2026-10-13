@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { setLongLat, appendimageData } from "../services/database";
+import { setLongLat, appendimageData, setStatusFound } from "../services/database";
 import { QRCodeCanvas } from "qrcode.react";
 import { sendMessage } from "../services/notify";
 import Camera, { FACING_MODES } from "react-html5-camera-photo";
