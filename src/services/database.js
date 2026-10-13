@@ -118,6 +118,15 @@ export async function setLongLat(Lat, Lon, leID) {
   return true;
 }
 
+export async function setStatusFound(leID) {
+  const q = query(collection(db, "items"), where("code", "==", leID));
+  const snap = await getDocs(q);
+  const codeRef = snap.docs[0].ref;
+  setDoc(codeRef, { status: "found" }, { merge: true });
+  return true;
+}
+
+
 export async function appendimageData(imageD, leID) {
   const q = query(collection(db, "items"), where("code", "==", leID));
   const snap = await getDocs(q);

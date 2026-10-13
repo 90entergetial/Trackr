@@ -18,6 +18,7 @@ export default function Found(props) {
       await sendMessage(props.info);
     }
     notifyOwner();
+    setStatusFound(props.info.code);
   }, [props.info]);
 
   async function Locate(event) {
