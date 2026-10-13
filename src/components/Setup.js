@@ -11,7 +11,7 @@ export default function Setup(props) {
     const TheNam = formData.get("TheName");
     const TheDes = formData.get("TheDesc");
     const TheirN = formData.get("TheirName");
-    const TheirG = formData.get("TheirGmail");
+    const TheirG = formData.get("TheirGmail").trim().toLowerCase();
 
     let Bounty = null;
 

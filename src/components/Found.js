@@ -14,11 +14,11 @@ export default function Found(props) {
   const [rror, setRror] = useState(0);
 
   useEffect(() => {
+    setStatusFound(props.info.code);
     async function notifyOwner() {
       await sendMessage(props.info);
     }
     notifyOwner();
-    setStatusFound(props.info.code);
   }, [props.info]);
 
   async function Locate(event) {
